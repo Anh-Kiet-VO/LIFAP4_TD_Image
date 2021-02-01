@@ -8,5 +8,5 @@ Anh-Kiet VO | p1907921
 
 -----------------
 
-![Wazowski](https://i.redd.it/j7ufxw4v1vx31.jpg)
+![Wazowski](https://i.redd.it/j7ufxw4v1vx31.jpg)  
 Kévin est raciste
