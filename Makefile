@@ -16,4 +16,4 @@ clean:
 	rm *.o
 
 veryclean:
-	rm bin/*
+	rm *
