@@ -1,19 +1,19 @@
-OBJS = mainTest.o Pixel.o Image.o
+OBJS = ./obj/mainTest.o ./obj/Pixel.o ./obj/Image.o
 FLAGS = -ggdb -Wall
 
-all: executable
+all: ./bin/test
 
-executable: $(OBJS)
-	g++ $(FLAGS) $(OBJS) -o executable
+./bin/test: $(OBJS)
+	g++ $(FLAGS) $(OBJS) -o ./bin/test
 
-mainTest.o: mainTest.cpp
-	g++ $(FLAGS) -c mainTest.cpp -o mainTest.o
+./obj/mainTest.o: ./src/mainTest.cpp
+	g++ $(FLAGS) -c ./src/mainTest.cpp -o ./obj/mainTest.o
 
-Pixel.o: Pixel.cpp Pixel.h
-	g++ $(FLAGS) -c Pixel.cpp -o Pixel.o
+./obj/Pixel.o: ./src/Pixel.cpp ./src/Pixel.h
+	g++ $(FLAGS) -c ./src/Pixel.cpp -o ./obj/Pixel.o
 
-Image.o: Image.cpp Image.h
-	g++ $(FLAGS) -c Image.cpp -o Image.o
+./obj/Image.o: ./src/Image.cpp ./src/Image.h
+	g++ $(FLAGS) -c ./src/Image.cpp -o ./obj/Image.o
 
 clean:
 	rm *.o
