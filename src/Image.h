@@ -4,6 +4,13 @@
 #include "Pixel.h"
 #include <string>
 
+/*
+#include <SDL.h>
+#include <SDL_ttf.h>
+#include <SDL_image.h>
+#include <SDL_mixer.h>
+*/
+
 using namespace std;
 
 class Image {
@@ -20,6 +27,14 @@ class Image {
     */
     unsigned int dimx, dimy;
     
+    /* Pour gérer une image avec SDL2
+    SDL_Surface * surface;
+    SDL_Texture * texture;
+    bool has_changed;
+    SDL_Window * window;
+    SDL_Renderer * renderer;
+    */
+
   public:
     /**
       @brief
