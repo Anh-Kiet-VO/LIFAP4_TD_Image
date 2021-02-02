@@ -2,6 +2,7 @@
 #include <cassert>
 
 Pixel::Pixel() {
+  
   r = g = b = 0;
 }
 
