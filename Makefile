@@ -30,7 +30,4 @@ all: ./bin/test ./bin/exemple ./bin/affichage
 	g++ $(FLAGS) -c ./src/Image.cpp -o ./obj/Image.o
 
 clean:
-	rm *.o
-
-veryclean:
-	rm *
+	rm ./obj/*.o
