@@ -7,5 +7,4 @@ debugdefault
 *.log
 build*
 doc/download*
-doc/html*
 doc/xml*
