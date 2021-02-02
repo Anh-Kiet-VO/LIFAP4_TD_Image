@@ -3,7 +3,6 @@
 #include <cassert>
 #include <fstream>
 
-
 using namespace std;
 
 Image::Image() {
