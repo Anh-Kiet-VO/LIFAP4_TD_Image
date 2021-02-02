@@ -89,13 +89,13 @@ void Image::ouvrir(const string & filename) {
 }
 
 void Image::afficherConsole() {
-    cout << dimx << " " << dimy << endl;
+    cout << "dimx = " << dimx << " ; dimy = " << dimy << endl;
 
-    for(unsigned int y = 0 ; y < dimy ; y++) {
-        for(unsigned int x = 0 ; x < dimx ; x++) {
-            Pixel pix = getPix(x , y);
-            cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
-        }
-        cout << endl;
-    }
+	for(unsigned int x=0; x<dimx; x++) {
+		for(unsigned int y=0; y<dimy; y++) {
+			Pixel pix = getPix(x, y);
+			cout << "[" << pix.getRouge() << " " << pix.getVert() << " " << pix.getBleu() << "] ";
+		}
+		cout << endl;
+	}
 }
