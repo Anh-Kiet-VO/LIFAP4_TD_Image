@@ -93,7 +93,7 @@ void Image::afficherConsole() {
 
     for(unsigned int y = 0 ; y < dimy ; y++) {
         for(unsigned int x = 0 ; x < dimx ; x++) {
-            Pixel& pix = getPix(x , y);
+            Pixel pix = getPix(x , y);
             cout << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
         cout << endl;
