@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['sauver_11',['sauver',['../class_image.html#af870cb0c00a370927e6957f99a409586',1,'Image']]],
-  ['setbleu_12',['setBleu',['../class_pixel.html#aa4277112ad13b6c3124f13d0c8769165',1,'Pixel']]],
-  ['setpix_13',['setPix',['../class_image.html#afd8126f2c377027b7e00ec3fe6a3372e',1,'Image']]],
-  ['setrouge_14',['setRouge',['../class_pixel.html#a2a1aed9785799a3f75de911438d0ceda',1,'Pixel']]],
-  ['setvert_15',['setVert',['../class_pixel.html#a78466338eb21bacee02c2e80ace292e9',1,'Pixel']]]
+  ['pixel_12',['Pixel',['../class_pixel.html',1,'Pixel'],['../class_pixel.html#a27ad99a2f705e635c42d242d530d4756',1,'Pixel::Pixel()'],['../class_pixel.html#a5c930d187b7d6412870150884e553421',1,'Pixel::Pixel(unsigned int nr, unsigned int ng, unsigned int nb)']]]
 ];

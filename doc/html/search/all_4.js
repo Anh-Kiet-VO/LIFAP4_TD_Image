@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['image_7',['Image',['../class_image.html',1,'Image'],['../class_image.html#a58edd1c45b4faeb5f789b0d036d02313',1,'Image::Image()'],['../class_image.html#a781829417e05ac62d5c1ea090a8844d1',1,'Image::Image(unsigned int dimensionX, unsigned int dimensionY)']]]
+  ['getbleu_5',['getBleu',['../class_pixel.html#a03f07bd8c0bd8afa5732b0a468cc5724',1,'Pixel']]],
+  ['getpix_6',['getPix',['../class_image.html#aa2c1f02bdf9178459b5bb7409ab86648',1,'Image']]],
+  ['getrouge_7',['getRouge',['../class_pixel.html#a770fe319ef462a48b83eeed28224e16e',1,'Pixel']]],
+  ['getvert_8',['getVert',['../class_pixel.html#a431fb781cc2cb35db18c3f07cc619afc',1,'Pixel']]]
 ];
