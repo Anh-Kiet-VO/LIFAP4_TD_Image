@@ -33,8 +33,8 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
-	for(unsigned int i = Xmin ; i <= Xmax ; i++){
-		for(unsigned int j = Ymin ; j <= Ymax ; j++){
+	for(unsigned int i = Xmin ; i <= Xmax ; i++) {
+		for(unsigned int j = Ymin ; j <= Ymax ; j++) {
 			setPix(j, i, couleur);
 		}
 	}
