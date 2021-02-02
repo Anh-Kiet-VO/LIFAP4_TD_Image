@@ -1,8 +1,12 @@
 CC = g++
+FLAGS = -ggdb -Wall
+
 OBJS_TEST = ./obj/mainTest.o ./obj/Pixel.o ./obj/Image.o
 OBJS_EXEMPLE = ./obj/mainExemple.o ./obj/Pixel.o ./obj/Image.o
 OBJS_AFFICHAGE = ./obj/mainAffichage.o ./obj/Pixel.o ./obj/Image.o
-FLAGS = -ggdb -Wall
+
+# INCLUDES_DIR_SDL = -I/usr/include/SDL2 
+# LIBS_SDL = -lSDL2 -lSDL2_ttf -lSDL2_image -lSDL2_mixer
 
 all: ./bin/test ./bin/exemple ./bin/affichage
 
