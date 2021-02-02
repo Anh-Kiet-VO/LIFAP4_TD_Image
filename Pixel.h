@@ -1,8 +1,6 @@
 #ifndef PIXEL_H
 #define PIXEL_H
 
-/// ************ Incrémentation bizarre, à changer, c'est trop moche srx. - Anh-Kiet
-
 class Pixel
 {
   private:
