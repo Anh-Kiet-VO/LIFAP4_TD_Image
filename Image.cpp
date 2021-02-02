@@ -1,9 +1,9 @@
 #include "Image.h"
 #include <cassert>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
-#include <iostream>
 
 Image::Image() {
 	dimx = dimy = 0;
@@ -29,13 +29,7 @@ Pixel Image::getPix(unsigned int x, unsigned int y) const {
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
 	assert(x < dimx && y < dimx);
-	tab[y * dimx + x] = couleur;
-}
-
-void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
-	for(unsigned int i = Xmin ; i <= Xmax ; i++) {
-		for(unsigned int j = Ymin ; j <= Ymax ; j++) {
-			setPix(j, i, couleur);
+	tab[y * dimx + x] = couleur)leur);
 		}
 	}
 }
