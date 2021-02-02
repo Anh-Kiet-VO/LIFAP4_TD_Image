@@ -91,6 +91,12 @@ class Image {
         Afficher les valeurs des pixels sur la console
     */
     void afficherConsole();
+
+    /**
+      @brief
+        Affiche l'image dans une fenêtre SDL2
+    */
+    void afficher ();
 };
 
 #endif
