@@ -13,7 +13,7 @@ Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
 	assert(dimensionX >= 0 && dimensionY >= 0);
 	dimx = dimensionX;
 	dimy = dimensionY;
-	tab = new Pixel [dimensionX*dimensionY];
+	tab = new Pixel [dimx*dimy];
 }
 
 Image::~Image() {
@@ -29,7 +29,7 @@ Pixel Image::getPix(unsigned int x, unsigned int y) const {
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
 	assert(x < dimx && y < dimx);
-	tab[y * dimx + x] = couleur;
+	tab[y * dimx + x] = couleur;	
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
@@ -43,16 +43,30 @@ void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, 
 }
 
 void Image::effacer(const Pixel& couleur) {
+	/* Faut mettre un assert ? */
 	dessinerRectangle(0,0,dimx,dimy,couleur);
 }
 
 void Image::testRegression() {
 	Image monIm (500,350);
-	Pixel mesPix (254,253,252);
+	Pixel mesPix (31,68,50);
 
 	assert(monIm.dimx == 500 && monIm.dimy == 350);
-	assert(mesPix.getRouge() == 254 && mesPix.getVert() == 253 && mesPix.getBleu() == 252);
+	assert(mesPix.getRouge() == 31 && mesPix.getVert() == 68 && mesPix.getBleu() == 50);
 	
+	/*monIm.*/dessinerRectangle(0, 0, 5, 5, mesPix);
+	
+	for(unsigned int i = 0 ; i < 5 ; i++) {
+		for(unsigned int j = 0 ; j < 5 ; j++) {
+			assert(getPix(i,j).getRouge() == 31);
+			assert(getPix(i,j).getVert() == 68);
+			assert(getPix(i,j).getBleu() == 50);
+		}
+	}
+
+	effacer(mesPix);
+	/* Test assert à faire */
+
 }
 
 void Image::sauver(const string & filename) const {
