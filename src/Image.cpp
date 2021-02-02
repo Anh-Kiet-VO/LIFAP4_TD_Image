@@ -13,7 +13,7 @@ Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
 	assert(dimensionX >= 0 && dimensionY >= 0);
 	dimx = dimensionX;
 	dimy = dimensionY;
-	tab = new Pixel [dimx*dimy];
+	tab = new Pixel [dimx * dimy];
 }
 
 Image::~Image() {
@@ -35,8 +35,8 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
 	assert(Xmin < Xmax && Ymin < Ymax && Xmin < dimx && Xmax <= dimx && Ymin < dimy && Ymax <= dimy);
 
-	for(unsigned int i=Ymin; i<Ymax; i++) {
-		for(unsigned int j=Xmin; j<Xmax; j++) {
+	for(unsigned int i = Ymin ; i < Ymax ; i++) {
+		for(unsigned int j = Xmin ; j < Xmax ; j++) {
 			setPix(i, j, couleur);
 		}
 	}
@@ -48,8 +48,8 @@ void Image::effacer(const Pixel& couleur) {
 }
 
 void Image::testRegression() {
-	Image monIm (500,350);
-	Pixel mesPix (31,68,50);
+	Image monIm (500, 350);
+	Pixel mesPix (31, 68, 50);
 
 	assert(monIm.dimx == 500 && monIm.dimy == 350);
 	assert(mesPix.getRouge() == 31 && mesPix.getVert() == 68 && mesPix.getBleu() == 50);
@@ -91,7 +91,7 @@ void Image::ouvrir(const string & filename) {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
 
-	unsigned int r,g,b;
+	unsigned int r, g, b;
 	string mot;
 
 	fichier >> mot >> dimx >> dimy >> mot;
@@ -103,9 +103,9 @@ void Image::ouvrir(const string & filename) {
     for(unsigned int y = 0 ; y < dimy ; y++) {
         for(unsigned int x = 0 ; x < dimx ; x++) {
             fichier >> r >> g >> b;
-            getPix(x , y).setRouge(r);
-            getPix(x , y).setVert(g);
-            getPix(x , y).setBleu(b);
+            getPix(x, y).setRouge(r);
+            getPix(x, y).setVert(g);
+            getPix(x, y).setBleu(b);
         }
 	}
     fichier.close();
@@ -115,8 +115,8 @@ void Image::ouvrir(const string & filename) {
 void Image::afficherConsole() {
     cout << "dimx = " << dimx << " ; dimy = " << dimy << endl;
 
-	for(unsigned int x=0; x<dimx; x++) {
-		for(unsigned int y=0; y<dimy; y++) {
+	for(unsigned int x = 0 ; x < dimx ; x++) {
+		for(unsigned int y = 0 ; y < dimy ; y++) {
 			Pixel pix = getPix(x, y);
 			cout << "[" << pix.getRouge() << " " << pix.getVert() << " " << pix.getBleu() << "] ";
 		}
