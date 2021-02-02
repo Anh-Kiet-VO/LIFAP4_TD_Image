@@ -1,7 +1,8 @@
 #include "Image.h"
+#include <iostream>
 #include <cassert>
 #include <fstream>
-#include <iostream>
+
 
 using namespace std;
 
