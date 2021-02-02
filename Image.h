@@ -4,6 +4,8 @@
 #include "Pixel.h"
 #include <string>
 
+using namespace std;
+
 class Image{
   private:
     Pixel * tab;
