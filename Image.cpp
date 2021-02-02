@@ -32,6 +32,16 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 	tab[y * dimx + x] = couleur;
 }
 
+void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
+	assert(Xmin < Xmax && Ymin < Ymax && Xmin < dimx && Xmax <= dimx && Ymin < dimy && Ymax <= dimy);
+
+	for(unsigned int i=Ymin; i<Ymax; i++) {
+		for(unsigned int j=Xmin; j<Xmax; j++) {
+			setPix(i, j, couleur);
+		}
+	}
+}
+
 void Image::effacer(const Pixel& couleur) {
 	dessinerRectangle(0,0,dimx,dimy,couleur);
 }

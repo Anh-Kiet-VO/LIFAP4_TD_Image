@@ -1,10 +1,10 @@
 OBJS = mainTest.o Pixel.o Image.o
-FLAGS = -ggdb -Wall 
+FLAGS = -ggdb -Wall
 
 all: executable
 
 executable: $(OBJS)
-	g++ $(FLAGS) mainTest.o Pixel.o Image.o -o executable
+	g++ $(FLAGS) $(OBJS) -o executable
 
 mainTest.o: mainTest.cpp
 	g++ $(FLAGS) -c mainTest.cpp -o mainTest.o
