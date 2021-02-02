@@ -1,35 +1,58 @@
 #ifndef PIXEL_H
 #define PIXEL_H
 
-class Pixel {
-	private:
-		// les composantes du pixel, unsigned char en C++
-		unsigned int r, g, b;
+/// ************ Incrémentation bizarre, à changer, c'est trop moche srx. - Anh-Kiet
 
-	public:
-		// les composantes du pixel, unsigned char en C++
-		Pixel();
+class Pixel
+{
+  private:
+    /**
+		@brief:
+		 Les composantes du pixel, unsigned int en C++
+		*/
+    unsigned int r, g, b;
 
-		// Constructeur de la classe: initialise r,g,b avec les paramètres  
-		Pixel(unsigned int nr, unsigned int ng, unsigned int nb);
+public:
+    /** @brief
+		 Les composantes du pixel, unsigned int en C++
+	*/
+    Pixel();
 
-		// Accesseur : récupère la composante rouge du pixel
-		unsigned int getRouge() const;
+    /** @brief
+		 Constructeur de la classe: initialise r,g,b avec les paramètres
+	*/
+    Pixel(unsigned int nr, unsigned int ng, unsigned int nb);
 
-		// Accesseur : récupère la composante verte du pixel
-		unsigned int getVert() const;
+    /** @brief
+		 Accesseur : récupère la composante rouge du pixel
+	*/
+    unsigned int getRouge() const;
 
-		// Accesseur : récupère la composante bleue du pixel
-		unsigned int getBleu() const;
+    /** @brief
+		 Accesseur : récupère la composante verte du pixel
+		*/
+    unsigned int getVert() const;
 
-		// Mutateur : modifie la composante rouge du pixel
-		void setRouge(unsigned int nr);
+    /** @brief
+		 Accesseur : récupère la composante bleue du pixel
+		*/
+    unsigned int getBleu() const;
 
-		// Mutateur : modifie la composante verte du pixel
-		void setVert(unsigned int nv);
+    /** @brief
+		 Mutateur : modifie la composante rouge du pixel
+		*/
+    void setRouge(unsigned int nr);
 
-		// Mutateur : modifie la composante bleue du pixel
-		void setBleu(unsigned int nb);
+    /** @brief
+		 Mutateur : modifie la composante verte du pixel
+		*/
+    void setVert(unsigned int nv);
+
+    /** 
+         @brief
+		Mutateur : modifie la composante bleue du pixel
+		*/
+    void setBleu(unsigned int nb);
 };
 
 #endif

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixel_2',['Pixel',['../class_pixel.html',1,'']]]
+  ['effacer_2',['effacer',['../class_image.html#a62d0c277a049c0ea1da7ba2dd2131c31',1,'Image']]]
 ];
