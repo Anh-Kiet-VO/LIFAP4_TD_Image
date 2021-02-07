@@ -38,7 +38,7 @@ int main()
 	cout << "\n2eme tableau :\n";
 	for(i=0;i<MAX;++i) cout << f2[i].v << "=" << f2[i].fact << endl;
 
-	delete [] f1;
+
 	delete [] f2;
 
 	return 0;
