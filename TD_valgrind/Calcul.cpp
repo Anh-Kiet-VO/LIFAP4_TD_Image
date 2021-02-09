@@ -21,6 +21,7 @@ int intMul (const int a, const int b)
 	for(i=0;i<b;++i)
 		r = intAdd(r,a);
 	return r;
+	//eheh
 }
 
 int intDiv (const int a, const int b)
