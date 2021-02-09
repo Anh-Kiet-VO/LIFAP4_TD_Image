@@ -49,17 +49,17 @@ La compilation vous a crée 3 fichiers .exe :
 * "exemple.exe"
 * "test.exe"
 
-Pour pouvoir les éxecuter rendez-vous d'abord dans le dossier /bin :
+Pour pouvoir les exécuter rendez-vous d'abord dans le dossier /bin :
 ```
 cd /bin
 ```
 
-Pour éxecuter "affichage.exe" : 
+Pour exécuter "affichage.exe" : 
 ```
 ./affichage
 ```
 
-Pour éxecuter "exemple.exe" : 
+Pour exécuter "exemple.exe" : 
 ```
 ./exemple
 ```
