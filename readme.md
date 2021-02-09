@@ -2,7 +2,7 @@
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
-Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)
+Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)  
 Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 
 -----------------
@@ -17,7 +17,7 @@ cd p1909458_p1907921_p1908025
 ```
 
 
-Il faut avoir préalablement enlevé les fichier non compatible (.o) sinon le Makefile ne fonctionnera pas :  
+Il faut avoir préalablement enlevé les fichiers non compatible (.o) sinon le Makefile ne fonctionnera pas :  
 ```
 rm ./obj/*.o
 ```
@@ -75,7 +75,7 @@ doxygen doc/image.dox
 
 Puis pour afficher la documentation :
 ```
-firefox doc/html/index.html
+[nom_de_votre_navigateur] doc/html/index.html
 ```
 
 (Ou rendez-vous au chemin doc/html/index.html)
