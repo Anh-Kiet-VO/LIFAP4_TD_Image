@@ -8,5 +8,6 @@ debugdefault
 build*
 doc/download*
 doc/xml*
+doc/html*
 doc/latex/
 ./obj/*.o
