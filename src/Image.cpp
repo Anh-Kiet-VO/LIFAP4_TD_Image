@@ -22,7 +22,7 @@ Image::~Image() {
 	dimy = 0;
 }
 
-Pixel Image::getPix(unsigned int x, unsigned int y) const {
+Pixel& Image::getPix(unsigned int x, unsigned int y) const {
 	assert(x < dimx && y < dimy); 
 	return tab[y * dimx + x];
 }
