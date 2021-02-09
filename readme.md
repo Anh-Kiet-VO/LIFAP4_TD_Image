@@ -64,7 +64,7 @@ Pour exécuter "exemple.exe" :
 ./exemple
 ```
 
-Pour éxecuter "test.exe" : 
+Pour exécuter "test.exe" : 
 ```
 ./test
 ```
