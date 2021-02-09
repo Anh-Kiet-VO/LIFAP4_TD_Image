@@ -1,15 +1,13 @@
 # LIFAP4 - TD Image
 
 ## Étudiants
-Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)
+Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
 Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)
 Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 
 -----------------
 
 ### Compilation :
-
------------------
 
 Afin de pouvoir compiler le programme, il faut utiliser le Makefile.  
 
@@ -27,12 +25,11 @@ rm ./obj/*.o
 Puis pour compiler le programme utiliser la commande :  
 ```
 make
-```
-
-
-### Exécution :
+```  
 
 -----------------
+
+### Exécution :
 
 La compilation vous a crée 3 fichiers .exe :  
 * "affichage.exe"
@@ -59,16 +56,16 @@ Pour éxecuter "test.exe" :
 ./test
 ```
 
+-----------------
 
 ### Module : 
 
------------------
 Ce module permet d'afficher une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
 
+-----------------
 
 ### Documentation :
 
------------------
 La documentation a été généré automatiquement via [Doxygen](https://www.doxygen.nl/index.html)  
 
 Pour pouvoir accéder à la documentation :  
