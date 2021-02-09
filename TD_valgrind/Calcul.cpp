@@ -7,9 +7,9 @@ int intAdd (const int a, const int b)
 	int r;
 	r = a;
 	if (b>=0)
-		for(i=0;i<b;i++) r++;
+		for(i=0;i<b;++i) ++r;
 	else
-		for(i=0;i<-b;i++) r--;
+		for(i=0;i<-b;++i) --r;
 	return r;
 }
 
