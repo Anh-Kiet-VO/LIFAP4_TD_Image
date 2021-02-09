@@ -112,7 +112,7 @@ void Image::ouvrir(const string & filename) {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficherConsole() {
+void Image::afficher() {
     cout << "dimx = " << dimx << " ; dimy = " << dimy << endl;
 
 	for(unsigned int x = 0 ; x < dimx ; x++) {
