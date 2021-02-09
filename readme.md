@@ -16,7 +16,6 @@ Organisation de l'archive :
 * /obj : Fichiers .o
 * /src : Fichiers .cpp et .h
 * /doc : Documentation  
-* /TD_Valgrind : TD Outils - Partie 2 : Gestion de mémoire/Optimisation de code
 
 -----------------
 
