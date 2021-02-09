@@ -27,19 +27,19 @@ class Pixel
       @brief
 		   Accesseur : récupère la composante rouge du pixel
   	*/
-    unsigned int getRouge() const;
+    unsigned char getRouge() const;
 
     /**
       @brief
 		    Accesseur : récupère la composante verte du pixel
 		*/
-    unsigned int getVert() const;
+    unsigned char getVert() const;
 
     /**
       @brief
 		    Accesseur : récupère la composante bleue du pixel
 		*/
-    unsigned int getBleu() const;
+    unsigned char getBleu() const;
 
     /**
       @brief
