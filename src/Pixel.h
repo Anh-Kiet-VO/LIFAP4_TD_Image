@@ -8,7 +8,7 @@ class Pixel
       @brief
 		    Les composantes du pixel, unsigned int en C++
 		*/
-    unsigned int r, g, b;
+    unsigned char r, g, b;
 
   public:
     /**
@@ -21,7 +21,7 @@ class Pixel
       @brief
 		    Constructeur de la classe : initialise r,g,b avec les paramètres
 	  */
-    Pixel(unsigned int nr, unsigned int ng, unsigned int nb);
+    Pixel(unsigned char nr, unsigned char ng, unsigned char nb);
 
     /**
       @brief
@@ -45,19 +45,19 @@ class Pixel
       @brief
 		    Mutateur : modifie la composante rouge du pixel
 		*/
-    void setRouge(unsigned int nr);
+    void setRouge(unsigned char nr);
 
     /**
       @brief
 		    Mutateur : modifie la composante verte du pixel
 		*/
-    void setVert(unsigned int nv);
+    void setVert(unsigned char nv);
 
     /** 
       @brief
 		    Mutateur : modifie la composante bleue du pixel
 		*/
-    void setBleu(unsigned int nb);
+    void setBleu(unsigned char nb);
 };
 
 #endif
