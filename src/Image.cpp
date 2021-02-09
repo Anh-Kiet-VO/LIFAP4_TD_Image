@@ -36,9 +36,7 @@ void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, 
 	//assert(Xmin < Xmax && Ymin < Ymax && Xmin < dimx && Xmax <= dimx && Ymin < dimy && Ymax <= dimy);
 	assert(Xmin < Xmax);
 	assert(Ymin < Ymax);
-	assert(Xmin < dimx);
 	assert(Xmax <= dimx);
-	assert(Ymin < dimy);
 	assert(Ymax <= dimy);
 	for(unsigned int i = Ymin ; i < Ymax ; i++) {
 		for(unsigned int j = Xmin ; j < Xmax ; j++) {
