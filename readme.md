@@ -7,6 +7,12 @@ Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 
 -----------------
 
+### Module : 
+
+Ce module permet d'afficher une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
+
+-----------------
+
 ### Compilation :
 
 Afin de pouvoir compiler le programme, il faut utiliser le Makefile.  
@@ -55,12 +61,6 @@ Pour éxecuter "test.exe" :
 ```
 ./test
 ```
-
------------------
-
-### Module : 
-
-Ce module permet d'afficher une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
 
 -----------------
 
