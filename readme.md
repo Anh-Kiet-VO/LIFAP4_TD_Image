@@ -9,7 +9,7 @@ Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 
 ### Module : 
 
-Ce module permet d'afficher une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
+Ce module permet d'afficher et de gérer une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
 
 Organisation de l'archive :  
 * /bin : Fichiers .exe
