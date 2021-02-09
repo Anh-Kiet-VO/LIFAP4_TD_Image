@@ -1,4 +1,5 @@
 # LIFAP4 - TD Image
+[ ] ENLEVEZ LES .EXE À LA FIN
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
