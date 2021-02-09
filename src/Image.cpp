@@ -67,7 +67,6 @@ void Image::testRegression() {
 	}
 
 	effacer(mesPix);
-
 }
 
 void Image::sauver(const string & filename) const {
