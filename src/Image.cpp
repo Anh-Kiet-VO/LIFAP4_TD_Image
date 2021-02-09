@@ -33,7 +33,6 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
-	//assert(Xmin < Xmax && Ymin < Ymax && Xmin < dimx && Xmax <= dimx && Ymin < dimy && Ymax <= dimy);
 	assert(Xmin < Xmax);
 	assert(Ymin < Ymax);
 	assert(Xmax <= dimx);
