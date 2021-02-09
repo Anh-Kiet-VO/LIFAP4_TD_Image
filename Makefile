@@ -38,4 +38,4 @@ doc:
 	doxygen doc/doxyfile
 
 clean:
-	rm ./obj/*.o
+	rm ./obj/*.o bin/test bin/exemple bin/affichage
