@@ -1,6 +1,12 @@
 # LIFAP4 - TD Image
 - [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
 
+À faire :
+* Recompilation pas ok de pixel.h et image .h
+* Doxygen pas reconnu lors du passage du script
+* Corriger les erreurs Valgrind Kévin
+* Suite du TD : SDL2
+
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
 Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)  
