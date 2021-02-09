@@ -11,6 +11,13 @@ Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 
 Ce module permet d'afficher une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
 
+Organisation de l'archive :  
+* /bin : Fichiers .exe
+* /obj : Fichiers .o
+* /src : Fichiers .cpp et .h
+* /doc : Documentation  
+* /TD_Valgrind : TD Outils - Partie 2 : Gestion de mémoire/Optimisation de code
+
 -----------------
 
 ### Compilation :
