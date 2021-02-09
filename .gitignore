@@ -9,4 +9,4 @@ build*
 doc/download*
 doc/xml*
 doc/latex/
-obj/*.o
+./obj/*.o
