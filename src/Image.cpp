@@ -45,7 +45,6 @@ void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, 
 }
 
 void Image::effacer(const Pixel& couleur) {
-	/* Faut mettre un assert ? */
 	dessinerRectangle(0,0,dimx,dimy,couleur);
 }
 
