@@ -55,7 +55,7 @@ void Image::testRegression() {
 	assert(monIm.dimx == 500 && monIm.dimy == 350);
 	assert(mesPix.getRouge() == 31 && mesPix.getVert() == 68 && mesPix.getBleu() == 50);
 	
-	/*monIm.*/dessinerRectangle(0, 0, 5, 5, mesPix);
+	dessinerRectangle(0, 0, 5, 5, mesPix);
 	
 	for(unsigned int i = 0 ; i < 5 ; i++) {
 		for(unsigned int j = 0 ; j < 5 ; j++) {
