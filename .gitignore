@@ -10,3 +10,4 @@ doc/download*
 doc/xml*
 doc/html*
 doc/latex/
+*.o
