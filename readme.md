@@ -10,6 +10,9 @@
 * Test regression pas compris
 * Suite du TD : SDL2
 
+- OUTPUT_DIRECTORY       = "A:\GITHUB REPOSITORY\LIFAP4_TD_Image\doc"
+(CHANGER PAR .)?
+
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
 Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)  
