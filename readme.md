@@ -2,10 +2,13 @@
 - [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
 
 À faire :
-* Recompilation pas ok de pixel.h et image .h
+* Recompilation pas ok de pixel.h et image .h (osef?)
 * Doxygen pas reconnu lors du passage du script
 * Corriger les erreurs Valgrind Kévin
-* Suite du TD : SDL2
+* Erreur initialisation du tab
+* Erreur destruction du tab
+* Test regression pas compris
+* * Suite du TD : SDL2
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
