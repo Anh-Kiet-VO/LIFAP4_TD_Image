@@ -8,8 +8,7 @@
 using namespace std;
 
 Image::Image() {
-	dimx = 0;
-	dimy = 0;
+	dimx = dimy = 0;
 }
 
 Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
@@ -20,13 +19,13 @@ Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
 }
 
 Image::~Image() {
+	delete [] tab;
 	dimx = 0;
 	dimy = 0;
-	delete [] tab;
 }
 
 Pixel& Image::getPix(unsigned int x, unsigned int y) const {
-	assert(x <= dimx && y <= dimy);
+	assert(x < dimx && y < dimy);
 	return tab[y * dimx + x];
 }
 
@@ -81,7 +80,7 @@ void Image::sauver(const string & filename) const {
 
     for (unsigned int y = 0; y < dimy; y++) {
         for (unsigned int x = 0; x < dimx; x++) {
-            Pixel pix = getPix(x, y);
+            Pixel &pix = getPix(x, y);
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
     }
@@ -112,7 +111,6 @@ void Image::ouvrir(const string & filename) {
 	}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
-
 }
 
 void Image::afficher() {

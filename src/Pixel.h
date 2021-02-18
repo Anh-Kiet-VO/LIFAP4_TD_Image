@@ -20,6 +20,8 @@ class Pixel
     /**
       @brief
 		    Constructeur de la classe : initialise r,g,b avec les paramètres
+      @param
+        nr, ng, nb : entier
 	  */
     Pixel(unsigned char nr, unsigned char ng, unsigned char nb);
 
@@ -44,18 +46,24 @@ class Pixel
     /**
       @brief
 		    Mutateur : modifie la composante rouge du pixel
+      @param
+        nr : entier
 		*/
     void setRouge(unsigned char nr);
 
     /**
       @brief
 		    Mutateur : modifie la composante verte du pixel
+      @param
+        nv : entier
 		*/
     void setVert(unsigned char nv);
 
     /** 
       @brief
 		    Mutateur : modifie la composante bleue du pixel
+      @param
+        nb : entier
 		*/
     void setBleu(unsigned char nb);
 };

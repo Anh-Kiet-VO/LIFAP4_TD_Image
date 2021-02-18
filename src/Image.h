@@ -39,7 +39,7 @@ class Image {
     /**
       @brief
         Constructeur par défaut de la classe: initialise dimx et dimy à 
-       ce constructeur n'alloue pas de pixel
+        ce constructeur n'alloue pas de pixel
     */
     Image();
 
@@ -53,7 +53,7 @@ class Image {
     /**
       @brief
         Destructeur de la classe: déallocation de la mémoire du tableau de pixels
-       et mise à jour des champs dimx et dimy à 0
+        et mise à jour des champs dimx et dimy à 0
     */
     ~Image();
 
@@ -61,18 +61,26 @@ class Image {
       @brief
         Accesseur : récupère le pixel original de coordonnées (x,y) en vérifiant leur validité
         la formule pour passer d'un tab 2D à un tab 1D est tab[y*dimx+x]
+      @param
+      x, y : entier
     */
     Pixel& getPix(unsigned int x, unsigned int y) const;
 
     /**
       @brief
        Mutateur : modifie le pixel de coordonnées (x,y)
+      @param
+      x, y : entier
+      couleur : pixel
     */
     void setPix(const unsigned int x, const unsigned int y, const Pixel& couleur);
 
     /**
       @brief
         Dessine un rectangle plein de la couleur dans l'image (en utilisant setPix, indices en paramètre compris)
+      @param
+        Xmin, Ymin, Xmax, Ymax : entier
+        couleur : pixel
     */
     void dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur);
 
@@ -80,6 +88,8 @@ class Image {
       @brief
         Efface l'image en la remplissant de la couleur en paramètre
         (en appelant dessinerRectangle avec le bon rectangle)
+      @param
+      couleur : pixel
     */
     void effacer(const Pixel& couleur);
 
@@ -92,12 +102,16 @@ class Image {
     /**
       @brief
        Sauver une image dans un fichier
+      @param
+      filename : chaine de caractères
     */
     void sauver(const string & filename) const;
 
     /**
       @brief
         Ouvrir une image depuis un fichier
+      @param
+       filename : chaine de caractères
     */
     void ouvrir(const string & filename);
 
