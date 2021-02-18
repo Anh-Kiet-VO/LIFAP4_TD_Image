@@ -26,7 +26,7 @@ Image::~Image() {
 }
 
 Pixel& Image::getPix(unsigned int x, unsigned int y) const {
-	assert(x < dimx && y < dimy);
+	assert(x <= dimx && y <= dimy);
 	return tab[y * dimx + x];
 }
 
@@ -112,6 +112,7 @@ void Image::ouvrir(const string & filename) {
 	}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
+
 }
 
 void Image::afficher() {
