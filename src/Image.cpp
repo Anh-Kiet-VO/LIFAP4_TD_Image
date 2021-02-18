@@ -102,9 +102,9 @@ void Image::ouvrir(const string & filename) {
     for(unsigned int y = 0 ; y < dimy ; y++) {
         for(unsigned int x = 0 ; x < dimx ; x++) {
             fichier >> r >> g >> b;
-            getPix(x, y).setRouge(r);
-            getPix(x, y).setVert(g);
-            getPix(x, y).setBleu(b);
+            getPix(x, y).setRouge((unsigned char) r);
+            getPix(x, y).setVert((unsigned char) g);
+            getPix(x, y).setBleu((unsigned char) b);
         }
 	}
     fichier.close();
@@ -117,7 +117,7 @@ void Image::afficherConsole() {
 	for(unsigned int x = 0; x < dimx; x++) {
 		for(unsigned int y = 0; y < dimy; y++) {
 			Pixel pix = getPix(x, y);
-			cout << "[" << pix.getRouge() << " " << pix.getVert() << " " << pix.getBleu() << "] ";
+			cout << "[" << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << "] ";
 		}
 		cout << endl;
 	}
