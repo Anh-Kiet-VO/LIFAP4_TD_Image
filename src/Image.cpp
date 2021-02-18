@@ -36,8 +36,8 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
-	assert(Xmin < Xmax);
-	assert(Ymin < Ymax);
+	assert(Xmin <= Xmax);
+	assert(Ymin <= Ymax);
 	assert(Xmax <= dimx);
 	assert(Ymax <= dimy);
 	for(unsigned int i = Ymin ; i < Ymax ; i++) {
@@ -62,9 +62,9 @@ void Image::testRegression() {
 	
 	for(unsigned int i = 0 ; i < 5 ; i++) {
 		for(unsigned int j = 0 ; j < 5 ; j++) {
-			assert(getPix(i,j).getRouge() == 31);
-			assert(getPix(i,j).getVert() == 68);
-			assert(getPix(i,j).getBleu() == 50);
+			assert(monIm.getPix(i,j).getRouge() == 31);
+			assert(monIm.getPix(i,j).getVert() == 68);
+			assert(monIm.getPix(i,j).getBleu() == 50);
 		}
 	}
 
@@ -112,7 +112,6 @@ void Image::ouvrir(const string & filename) {
 	}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
-
 }
 
 void Image::afficher() {
