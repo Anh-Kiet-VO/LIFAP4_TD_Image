@@ -8,7 +8,7 @@
 * Erreur initialisation du tab
 * Erreur destruction du tab
 * Test regression pas compris
-* * Suite du TD : SDL2
+* Suite du TD : SDL2
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
