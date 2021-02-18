@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cassert>
 #include <fstream>
+#include <stdlib.h>
+
 
 using namespace std;
 
@@ -108,6 +110,16 @@ void Image::ouvrir(const string & filename) {
 	}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
+}
+
+void Image::afficher(){
+	window = SDL_CreateWindow("Pacman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+    if (window == NULL) {
+        cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; 
+        SDL_Quit(); 
+        exit(1);
+    }
+
 }
 
 void Image::afficherConsole() {
