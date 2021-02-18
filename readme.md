@@ -62,17 +62,17 @@ Pour pouvoir les exécuter rendez-vous d'abord dans le dossier /bin :
 cd /bin
 ```
 
-Pour exécuter "affichage.exe" : 
+Pour exécuter "affichage" : 
 ```
 ./affichage
 ```
 
-Pour exécuter "exemple.exe" : 
+Pour exécuter "exemple" : 
 ```
 ./exemple
 ```
 
-Pour exécuter "test.exe" : 
+Pour exécuter "test" : 
 ```
 ./test
 ```
