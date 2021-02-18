@@ -8,7 +8,8 @@
 using namespace std;
 
 Image::Image() {
-	dimx = dimy = 0;
+	dimx = 0;
+	dimy = 0;
 }
 
 Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
@@ -19,9 +20,9 @@ Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
 }
 
 Image::~Image() {
-	delete [] tab;
 	dimx = 0;
 	dimy = 0;
+	delete [] tab;
 }
 
 Pixel& Image::getPix(unsigned int x, unsigned int y) const {
