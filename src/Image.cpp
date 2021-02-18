@@ -23,13 +23,13 @@ Image::~Image() {
 }
 
 Pixel& Image::getPix(unsigned int x, unsigned int y) const {
-	assert(x < dimx && y < dimy); 
+	assert(x < dimx && y < dimy);
 	return tab[y * dimx + x];
 }
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
 	assert(x < dimx && y < dimx);
-	tab[y * dimx + x] = couleur;	
+	getPix(x, y) = couleur;
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
