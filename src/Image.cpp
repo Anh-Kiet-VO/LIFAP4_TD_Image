@@ -76,8 +76,8 @@ void Image::sauver(const string & filename) const {
     fichier << dimx << " " << dimy << endl;
     fichier << "255" << endl;
 
-    for (unsigned int y = 0 ; y < dimy ; y++) {
-        for (unsigned int x = 0 ; x < dimx ; x++) {
+    for (unsigned int y = 0; y < dimy; y++) {
+        for (unsigned int x = 0; x < dimx; x++) {
             Pixel pix = getPix(x, y);
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
