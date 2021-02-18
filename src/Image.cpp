@@ -111,11 +111,11 @@ void Image::ouvrir(const string & filename) {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficher() {
+void Image::afficherConsole() {
     cout << "dimx = " << dimx << " ; dimy = " << dimy << endl;
 
-	for(unsigned int x = 0 ; x < dimx ; x++) {
-		for(unsigned int y = 0 ; y < dimy ; y++) {
+	for(unsigned int x = 0; x < dimx; x++) {
+		for(unsigned int y = 0; y < dimy; y++) {
 			Pixel pix = getPix(x, y);
 			cout << "[" << pix.getRouge() << " " << pix.getVert() << " " << pix.getBleu() << "] ";
 		}

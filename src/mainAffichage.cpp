@@ -16,7 +16,7 @@ int main (int argc, char** argv) {
    image.setPix(8, 6, orange);
    image.setPix(2, 4, gris);
  
-   image.afficher();
+   image.afficherConsole();
  
    return 0;
 }
