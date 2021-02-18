@@ -1,17 +1,13 @@
 # LIFAP4 - TD Image
 - [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
+(Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* Recompilation pas ok de pixel.h et image .h (osef?)
-* Doxygen pas reconnu lors du passage du script
-* Corriger les erreurs Valgrind Kévin
-* Erreur initialisation du tab
-* Erreur destruction du tab
+* Doxygen pas reconnu lors du passage du script (OUTPUT_DIRECTORY -> Remplacer par . ?)
+* Erreur initialisation/destruction du tab 
 * Test regression pas compris
+* image.ppm non generee
 * Suite du TD : SDL2
-
-- OUTPUT_DIRECTORY       = "A:\GITHUB REPOSITORY\LIFAP4_TD_Image\doc"
-(CHANGER PAR .)?
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
@@ -66,17 +62,17 @@ Pour pouvoir les exécuter rendez-vous d'abord dans le dossier /bin :
 cd /bin
 ```
 
-Pour exécuter "affichage.exe" : 
+Pour exécuter "affichage" : 
 ```
 ./affichage
 ```
 
-Pour exécuter "exemple.exe" : 
+Pour exécuter "exemple" : 
 ```
 ./exemple
 ```
 
-Pour exécuter "test.exe" : 
+Pour exécuter "test" : 
 ```
 ./test
 ```
