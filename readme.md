@@ -1,5 +1,5 @@
 # LIFAP4 - TD Image
-- [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
+- [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA CACA @@@@@@@@@@@@@@
 
 À faire :
 * Recompilation pas ok de pixel.h et image .h
