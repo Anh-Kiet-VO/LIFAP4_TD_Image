@@ -78,7 +78,7 @@ void Image::sauver(const string & filename) const {
 
     for (unsigned int y = 0; y < dimy; y++) {
         for (unsigned int x = 0; x < dimx; x++) {
-            Pixel pix = getPix(x, y);
+            Pixel &pix = getPix(x, y);
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
     }
@@ -90,7 +90,7 @@ void Image::ouvrir(const string & filename) {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
 
-	unsigned int r, g, b;
+	unsigned char r, g, b;
 	string mot;
 
 	fichier >> mot >> dimx >> dimy >> mot;
