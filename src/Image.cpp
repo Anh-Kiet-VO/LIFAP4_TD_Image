@@ -71,7 +71,8 @@ void Image::testRegression() {
 }
 
 void Image::sauver(const string & filename) const {
-    ofstream fichier(filename.c_str());
+    ofstream fichier;
+	fichier.open(filename.c_str());
     assert(fichier.is_open());
     fichier << "P3" << endl;
     fichier << dimx << " " << dimy << endl;
@@ -112,14 +113,13 @@ void Image::ouvrir(const string & filename) {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficher(){
-	window = SDL_CreateWindow("Pacman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+void Image::afficher() {
+	/*window = SDL_CreateWindow("Pacman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
     if (window == NULL) {
         cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; 
         SDL_Quit(); 
         exit(1);
-    }
-
+    }*/
 }
 
 void Image::afficherConsole() {
