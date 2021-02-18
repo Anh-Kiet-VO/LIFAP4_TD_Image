@@ -9,6 +9,7 @@ using namespace std;
 
 Image::Image() {
 	dimx = dimy = 0;
+	tab = nullptr;
 }
 
 Image::Image(unsigned int dimensionX, unsigned int dimensionY) {
