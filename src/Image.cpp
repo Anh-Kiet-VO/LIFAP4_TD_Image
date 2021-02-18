@@ -29,7 +29,7 @@ Pixel& Image::getPix(unsigned int x, unsigned int y) const {
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
 	assert(x < dimx && y < dimx);
-	getPix(x, y) = couleur;
+	tab[y * dimx + x] = couleur;
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
