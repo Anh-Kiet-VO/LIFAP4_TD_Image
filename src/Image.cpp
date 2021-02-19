@@ -52,36 +52,69 @@ void Image::effacer(const Pixel& couleur) {
 }
 
 void Image::testRegression() {
-	Image monIm (500, 350);
-	Pixel mesPix (31, 68, 50);
+	//Vérification des constructeurs
+	assert(dimx >=0);
+	assert(dimy >=0);
 
-	assert(monIm.dimx == 500 && monIm.dimy == 350);
-	assert(mesPix.getRouge() == 31 && mesPix.getVert() == 68 && mesPix.getBleu() == 50);
+	Image monIm (10, 10);
+	Pixel monPix (31, 68, 50);
+
+	assert(monIm.dimx == 10 && monIm.dimy == 10);
+
+	//Vérification des get
+	assert(monPix.getRouge() == 31);
+	assert(monPix.getVert() == 68);
+	assert(monPix.getBleu() == 50);
+
+	//Vérification des set
+	monPix.setRouge(78);
+	monPix.setVert(12);
+	monPix.setBleu(104);
+
+	assert(monPix.getRouge() == 78);
+	assert(monPix.getVert() == 12);
+	assert(monPix.getBleu() == 104);
+
+	//Vérification de setPix et getPix
+	monIm.setPix(3, 4, monPix);
+
+	assert(monIm.getPix(3, 4).getRouge() == 78);
+	assert(monIm.getPix(3, 4).getVert() == 12);
+	assert(monIm.getPix(3, 4).getBleu() == 104);
+
+	//Vérification de dessinerRectangle
+	monIm.dessinerRectangle(0, 0, 5, 5, monPix);
 	
-	monIm.dessinerRectangle(0, 0, 5, 5, mesPix);
-	
-	for(unsigned int i = 0 ; i < 5 ; i++) {
-		for(unsigned int j = 0 ; j < 5 ; j++) {
-			assert(monIm.getPix(i,j).getRouge() == 31);
-			assert(monIm.getPix(i,j).getVert() == 68);
-			assert(monIm.getPix(i,j).getBleu() == 50);
+	for(unsigned int i = 0; i < 5; i++) {
+		for(unsigned int j = 0; j < 5; j++) {
+			assert(monIm.getPix(i, j).getRouge() == 78);
+			assert(monIm.getPix(i, j).getVert() == 12);
+			assert(monIm.getPix(i, j).getBleu() == 104);
 		}
 	}
 
-	effacer(mesPix);
+	//Vérification de effacer
+	monIm.effacer(monPix);
+
+	for(unsigned int i = 0; i < monIm.dimx; i++) {
+		for(unsigned int j = 0; j < monIm.dimy; j++) {
+			assert(monIm.getPix(i, j).getRouge() == 78);
+			assert(monIm.getPix(i, j).getVert() == 12);
+			assert(monIm.getPix(i, j).getBleu() == 104);
+		}
+	}
 }
 
 void Image::sauver(const string & filename) const {
-    ofstream fichier;
-	fichier.open(filename.c_str());
+    ofstream fichier (filename.c_str());
     assert(fichier.is_open());
     fichier << "P3" << endl;
     fichier << dimx << " " << dimy << endl;
     fichier << "255" << endl;
 
-    for (unsigned int y = 0; y < dimy; y++) {
-        for (unsigned int x = 0; x < dimx; x++) {
-            Pixel &pix = getPix(x, y);
+    for (unsigned int y = 0; y < dimy; ++y) {
+        for (unsigned int x = 0; x < dimx; ++x) {
+            Pixel pix = getPix(x, y);
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
     }
