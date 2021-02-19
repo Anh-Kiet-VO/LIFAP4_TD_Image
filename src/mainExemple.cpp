@@ -14,9 +14,7 @@ int main() {
     image1.dessinerRectangle(32, 24, 46, 35, rouge);
     image1.setPix(6, 10, noir);
     image1.setPix(41, 30, vert);
-    cout << "HEYO" << endl;
-    image1.sauver("../data/HAHAHA.ppm");
-    cout << "RATATAT" << endl;
+    image1.sauver("../data/image1.ppm");
  
     Image image2;
     image2.ouvrir("../data/image1.ppm");
