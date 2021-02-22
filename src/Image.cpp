@@ -2,6 +2,7 @@
 #include <cassert>
 #include <fstream>
 #include <stdlib.h>
+
 #include <iostream>
 using namespace std;
 
@@ -35,15 +36,15 @@ void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& coul
 	tab[y * dimx + x] = couleur;
 }
 
-void Image::dessinerRectangle(unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur) {
+void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
 	assert(Xmin <= Xmax);
 	assert(Xmin <= dimx);
 	assert(Xmax <= dimx);
 	assert(Ymin <= Ymax);
 	assert(Ymin <= dimy);
 	assert(Ymax <= dimy);
-	for(unsigned int y = Ymin ; y < Ymax ; ++y) {
-		for(unsigned int x = Xmin ; x < Xmax ; ++x) {
+	for(unsigned int y = Ymin; y < Ymax; ++y) {
+		for(unsigned int x = Xmin; x < Xmax; ++x) {
 			setPix(x, y, couleur);
 		}
 	}
@@ -138,8 +139,8 @@ void Image::ouvrir(const string & filename) {
 	if (tab != NULL) delete [] tab;
 	tab = new Pixel [dimx * dimy];
 
-    for(unsigned int y = 0 ; y < dimy ; y++) {
-        for(unsigned int x = 0 ; x < dimx ; x++) {
+    for(unsigned int y = 0; y < dimy; y++) {
+        for(unsigned int x = 0; x < dimx; x++) {
             fichier >> r >> g >> b;
             getPix(x, y).setRouge((unsigned char) r);
             getPix(x, y).setVert((unsigned char) g);

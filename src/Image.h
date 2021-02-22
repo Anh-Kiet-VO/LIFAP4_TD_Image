@@ -82,7 +82,7 @@ class Image {
         Xmin, Ymin, Xmax, Ymax : entier
         couleur : pixel
     */
-    void dessinerRectangle(unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur);
+    void dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur);
 
     /**
       @brief
