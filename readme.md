@@ -6,7 +6,6 @@
 * Doxygen pas reconnu lors du passage du script
 * Erreur initialisation/destruction du tab 
 * Test regression pas compris
-* image.ppm non generee
 * Suite du TD : SDL2
 
 ## Étudiants
