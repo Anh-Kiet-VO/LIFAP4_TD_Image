@@ -1,10 +1,8 @@
 #include "Image.h"
-#include <iostream>
 #include <cassert>
 #include <fstream>
 #include <stdlib.h>
-
-
+#include <iostream>
 using namespace std;
 
 Image::Image() {
@@ -26,29 +24,33 @@ Image::~Image() {
 }
 
 Pixel& Image::getPix(unsigned int x, unsigned int y) const {
-	assert(x < dimx && y < dimy);
+	assert(x < dimx);
+	assert(y < dimy);
 	return tab[y * dimx + x];
 }
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
-	assert(x < dimx && y < dimx);
+	assert(x < dimx);
+	assert(y < dimy);
 	tab[y * dimx + x] = couleur;
 }
 
-void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
+void Image::dessinerRectangle(unsigned int Xmin, unsigned int Ymin, unsigned int Xmax, unsigned int Ymax, const Pixel& couleur) {
 	assert(Xmin <= Xmax);
-	assert(Ymin <= Ymax);
+	assert(Xmin <= dimx);
 	assert(Xmax <= dimx);
+	assert(Ymin <= Ymax);
+	assert(Ymin <= dimy);
 	assert(Ymax <= dimy);
-	for(unsigned int i = Ymin ; i < Ymax ; i++) {
-		for(unsigned int j = Xmin ; j < Xmax ; j++) {
-			setPix(i, j, couleur);
+	for(unsigned int y = Ymin ; y < Ymax ; ++y) {
+		for(unsigned int x = Xmin ; x < Xmax ; ++x) {
+			setPix(x, y, couleur);
 		}
 	}
 }
 
 void Image::effacer(const Pixel& couleur) {
-	dessinerRectangle(0,0,dimx,dimy,couleur);
+	dessinerRectangle(0, 0, dimx, dimy, couleur);
 }
 
 void Image::testRegression() {
