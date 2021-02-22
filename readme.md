@@ -3,7 +3,7 @@
 (Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* Doxygen pas reconnu lors du passage du script (OUTPUT_DIRECTORY -> Remplacer par . ?)
+* Doxygen pas reconnu lors du passage du script
 * Erreur initialisation/destruction du tab 
 * Test regression pas compris
 * image.ppm non generee
