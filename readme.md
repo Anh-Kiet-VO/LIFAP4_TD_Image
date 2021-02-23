@@ -81,12 +81,10 @@ La documentation a été généré automatiquement via [Doxygen](https://www.dox
 
 Pour pouvoir accéder à la documentation :  
 ```
-doxygen doc/image.dox
+doxygen doc/image.doxy
 ```
 
 Puis pour afficher la documentation :
 ```
 [nom_de_votre_navigateur] doc/html/index.html
 ```
-
-(Ou rendez-vous au chemin doc/html/index.html)
