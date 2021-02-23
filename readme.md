@@ -48,10 +48,10 @@ make
 
 ### Exécution :
 
-La compilation vous a crée 3 fichiers .exe :  
-* "affichage.exe"
-* "exemple.exe"
-* "test.exe"
+La compilation vous a crée 3 fichiers executable :  
+* "affichage"
+* "exemple"
+* "test"
 
 Pour pouvoir les exécuter rendez-vous d'abord dans le dossier /bin :
 ```
