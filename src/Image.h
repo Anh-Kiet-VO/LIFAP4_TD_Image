@@ -1,3 +1,10 @@
+/**
+  @brief Module gérant une Image
+  @file Image.h
+
+  @date 23 février 2021
+*/
+
 #ifndef IMAGE_H
 #define IMAGE_H
  

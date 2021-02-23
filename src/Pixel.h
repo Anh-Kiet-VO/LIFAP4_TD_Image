@@ -1,3 +1,10 @@
+/**
+  @brief Module gérant un Pixel
+  @file Pixel.h
+
+  @date 23 février 2021
+*/
+
 #ifndef PIXEL_H
 #define PIXEL_H
  
