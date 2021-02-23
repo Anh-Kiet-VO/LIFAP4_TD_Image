@@ -1,7 +1,7 @@
 #include "Image.h"
  
 int main() {
-   Image monImage (4,4);
+   Image monImage;
    monImage.testRegression();
    return 0;
 }
