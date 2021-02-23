@@ -3,10 +3,7 @@
 (Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* Doxygen pas reconnu lors du passage du script
-* Erreur initialisation/destruction du tab 
-* Test regression pas compris
-* Suite du TD : SDL2
+* SDL2 ==> afficher(), afficherBoucle(), afficherDetruit()
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
