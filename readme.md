@@ -28,15 +28,9 @@ Organisation de l'archive :
 
 Afin de pouvoir compiler le programme, il faut utiliser le Makefile.  
 
-Rendez-vous dans le dossier p1909458_p1907921_p1908025 :
+Rendez-vous dans le dossier P1909458_P1907921_P1908025 :
 ```
-cd p1909458_p1907921_p1908025
-```
-
-
-Il faut avoir préalablement enlevé les fichiers non compatible (.o) sinon le Makefile ne fonctionnera pas :  
-```
-rm ./obj/*.o
+cd P1909458_P1907921_P1908025
 ```
 
 Puis pour compiler le programme utiliser la commande :  
