@@ -176,11 +176,16 @@ void Image::afficherInit() {
 	surface = IMG_Load("./data/ImageSDL.ppm");
 	
 	renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
-
+	
+	//création de la texture
 	texture = SDL_CreateTextureFromSurface(renderer,surface);
-	SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
+	
+	//couleur de fond
+	SDL_SetRenderDrawColor(renderer, 128, 128, 128, 128);
 	
 	SDL_RenderClear(renderer);
+
+	//création des dimensions de notre fenêtre
     SDL_Rect r;
     r.x = 0;
     r.y = 0;
@@ -193,10 +198,38 @@ void Image::afficherInit() {
 
 void Image::afficherBoucle(){
 	SDL_Event event;
+	SDL_Rect r;
 	bool fermer = false;
 	while (!fermer){
 		SDL_WaitEvent(&event);
-		if(event.type == SDL_QUIT) fermer = true;
+		if(event.type == SDL_QUIT ){
+			fermer = true;
+		}
+		switch(event.key.keysym.scancode){
+			case SDL_SCANCODE_ESCAPE: //si escape est pressée la fenêtre se ferme
+				fermer = true;
+				break;
+			//Si G est pressée dézoom sur l'image
+			case SDL_SCANCODE_G: 
+				SDL_RenderClear(renderer);
+				r.x += 10;
+				r.y += 10;
+				r.w -= 20;
+				r.h -= 20;
+				SDL_RenderCopy(renderer,texture,NULL,&r);
+				break;
+			//Si T est pressée zoom sur l'image
+			case SDL_SCANCODE_T:
+				SDL_RenderClear(renderer);
+				r.x -= 10;
+				r.y -= 10;
+				r.w += 20;
+				r.h += 20;
+				SDL_RenderCopy(renderer,texture,NULL,&r);
+				break;
+			default: break;
+		}
+		SDL_RenderPresent(renderer);
 	}
 }
 
