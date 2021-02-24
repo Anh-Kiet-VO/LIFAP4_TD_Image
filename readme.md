@@ -1,9 +1,8 @@
 # LIFAP4 - TD Image
-- [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
-(Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* SDL2 ==> afficher(), afficherBoucle(), afficherDetruit()
+* SDL2 ==> afficher(), afficherBoucle()
+=> Le poisson ne s'affiche pas
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
