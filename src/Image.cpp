@@ -151,15 +151,6 @@ void Image::ouvrir(const string & filename) {
     cout << "Lecture de l'image " << filename << " ... OK\n";
 }
 
-void Image::afficher() {
-	/*window = SDL_CreateWindow("Pacman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-    if (window == NULL) {
-        cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; 
-        SDL_Quit(); 
-        exit(1);
-    }*/
-}
-
 void Image::afficherConsole() {
     cout << "dimx = " << dimx << " ; dimy = " << dimy << endl;
 
@@ -170,4 +161,57 @@ void Image::afficherConsole() {
 		}
 		cout << endl;
 	}
+}
+
+void Image::afficherInit() {
+	//création de la fenêtre SDL
+	window = SDL_CreateWindow("ImageSDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 200, 200, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+    if (window == NULL) {
+        cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; 
+        SDL_Quit(); 
+        exit(1);
+    }
+
+	sauver("./data/ImageSDL.ppm");
+	surface = IMG_Load("./data/ImageSDL.ppm");
+	
+	renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
+
+	texture = SDL_CreateTextureFromSurface(renderer,surface);
+
+	SDL_RenderClear(renderer);
+	
+    SDL_Rect r;
+    r.x = 0;
+    r.y = 0;
+    r.w = 200;
+    r.h = 200;
+
+	SDL_RenderCopy(renderer,texture,NULL,&r);
+
+	
+	SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
+    SDL_RenderClear(renderer);
+}
+
+void Image::afficherBoucle(){
+	SDL_Event event;
+	bool fermer = false;
+	while (!fermer){
+		SDL_WaitEvent(&event);
+		if(event.type == SDL_QUIT || event.type == SDL_SCANCODE_SPACE) fermer = true;
+	}
+}
+
+void Image::afficherDetruit(){
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_DestroyTexture(texture);
+	SDL_Quit();
+}
+
+void Image::afficher(){
+	afficherInit();
+	afficherBoucle();
+	afficherDetruit();
 }

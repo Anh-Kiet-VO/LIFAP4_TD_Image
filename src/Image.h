@@ -7,16 +7,12 @@
 
 #ifndef IMAGE_H
 #define IMAGE_H
- 
+
 #include "Pixel.h"
 #include <string>
- 
-/*
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-*/
+
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
  
 using namespace std;
  
@@ -34,13 +30,32 @@ class Image {
     */
     unsigned int dimx, dimy;
     
-    /* Pour gérer une image avec SDL2
+    /** 
+      @brief
+        Pour gérer une image avec SDL2
+    */
     SDL_Surface * surface;
     SDL_Texture * texture;
-    bool has_changed;
     SDL_Window * window;
     SDL_Renderer * renderer;
+
+    /**
+      @brief
+        Affiche l'image dans une fenêtre SDL2
     */
+    void afficherInit();
+
+    /**
+      @brief
+        Affiche boucle de gestion des évènements
+    */
+    void afficherBoucle();
+
+    /**
+      @brief
+        Détruire l'affichage de la fenêtre
+    */
+    void afficherDetruit();
  
   public:
     /**
@@ -127,13 +142,9 @@ class Image {
       @brief
       Afficher les valeurs des pixels sur la console
     */
-    void afficherConsole();
- 
-    /**
-      @brief
-        Affiche l'image dans une fenêtre SDL2
-    */
-    void afficher ();
+    void afficherConsole(); 
+
+    void afficher();
 };
  
 #endif
