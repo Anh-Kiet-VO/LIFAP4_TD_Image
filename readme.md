@@ -1,8 +1,9 @@
 # LIFAP4 - TD Image
 
 À faire :
-* SDL2 ==> afficher(), afficherBoucle()
-=> Le poisson est handicapé / zoomDezoom de notre afficherBoucle
+* afficherBoucle() (zoom / dezoom)
+* Dépendance erreur lors du script
+* Le poison n'est plus handicapé, Cécilia joue contre nous
 
 ### Étudiants :
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
@@ -34,7 +35,7 @@ cd P1909458_P1907921_P1908025
 
 Puis pour compiler le programme utiliser la commande :  
 ```
-make
+make all
 ```  
 
 -----------------
