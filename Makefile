@@ -35,7 +35,7 @@ all: ./bin/test ./bin/exemple ./bin/affichage
 	$(CC) $(FLAGS) -c ./src/Image.cpp -o ./obj/Image.o
 
 doc:
-	doxygen -g doc/doxyfile
+	doxygen -g doc/image.doxy
 
 clean:
 	rm ./obj/*.o ./bin/test.exe ./bin/exemple.exe ./bin/affichage.exe
