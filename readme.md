@@ -3,10 +3,7 @@
 (Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* Doxygen pas reconnu lors du passage du script
-* Erreur initialisation/destruction du tab 
-* Test regression pas compris
-* Suite du TD : SDL2
+* SDL2 ==> afficher(), afficherBoucle(), afficherDetruit()
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
@@ -20,7 +17,7 @@ Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
 Ce module permet d'afficher et de gérer une image. Celui-ci est en quelque sorte un tableau à 2 dimensions de largeur dimX et de hauteur dimY, dont les élements sont des pixels.
 
 Organisation de l'archive :  
-* /bin : Fichiers .exe
+* /bin : Fichiers executable
 * /obj : Fichiers .o
 * /src : Fichiers .cpp et .h
 * /doc : Documentation  
@@ -31,15 +28,9 @@ Organisation de l'archive :
 
 Afin de pouvoir compiler le programme, il faut utiliser le Makefile.  
 
-Rendez-vous dans le dossier p1909458_p1907921_p1908025 :
+Rendez-vous dans le dossier P1909458_P1907921_P1908025 :
 ```
-cd p1909458_p1907921_p1908025
-```
-
-
-Il faut avoir préalablement enlevé les fichiers non compatible (.o) sinon le Makefile ne fonctionnera pas :  
-```
-rm ./obj/*.o
+cd P1909458_P1907921_P1908025
 ```
 
 Puis pour compiler le programme utiliser la commande :  
@@ -51,10 +42,10 @@ make
 
 ### Exécution :
 
-La compilation vous a crée 3 fichiers .exe :  
-* "affichage.exe"
-* "exemple.exe"
-* "test.exe"
+La compilation vous a crée 3 fichiers executable :  
+* "affichage"
+* "exemple"
+* "test"
 
 Pour pouvoir les exécuter rendez-vous d'abord dans le dossier /bin :
 ```
@@ -84,12 +75,10 @@ La documentation a été généré automatiquement via [Doxygen](https://www.dox
 
 Pour pouvoir accéder à la documentation :  
 ```
-doxygen doc/image.dox
+doxygen doc/image.doxy
 ```
 
 Puis pour afficher la documentation :
 ```
 [nom_de_votre_navigateur] doc/html/index.html
 ```
-
-(Ou rendez-vous au chemin doc/html/index.html)

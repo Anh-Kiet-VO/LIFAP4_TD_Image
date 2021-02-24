@@ -35,7 +35,7 @@ all: ./bin/test ./bin/exemple ./bin/affichage
 	$(CC) $(FLAGS) $(INCLUDES_DIR_SDL) -c ./src/Image.cpp -o ./obj/Image.o $(LIBS_SDL)
 
 doc:
-	doxygen -g doc/doxyfile
+	doxygen -g doc/image.doxy
 
 clean:
 	rm ./obj/*.o ./bin/test ./bin/exemple ./bin/affichage
