@@ -1,11 +1,10 @@
 # LIFAP4 - TD Image
-- [ ] ENLEVEZ LES .EXE À LA FIN @@@@@@@@@@@ CECILIA @@@@@@@@@@@@@@
-(Sinon ça enlève des pts vu que les .exe sont pour windows)
 
 À faire :
-* SDL2 ==> afficher(), afficherBoucle(), afficherDetruit()
+* SDL2 ==> afficher(), afficherBoucle()
+=> Le poisson est handicapé / zoomDezoom de notre afficherBoucle
 
-## Étudiants
+### Étudiants :
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
 Anh-Kiet VO (p1907921 - anhkiet.vo@etu.univ-lyon1.fr)  
 Cécilia NGUYEN (p1908025 - cecilia.nguyen@etu.univ-lyon1.fr)
