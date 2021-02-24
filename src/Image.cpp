@@ -31,27 +31,27 @@ Pixel& Image::getPix(unsigned int x, unsigned int y) const {
 }
 
 void Image::setPix(const unsigned int x, const unsigned int y, const Pixel& couleur) {
-	assert(x < dimx);
-	assert(y < dimy);
+	//cout << "test" << x << " " << y << endl;
+	assert(x < dimx && y < dimy);
 	tab[y * dimx + x] = couleur;
 }
 
 void Image::dessinerRectangle(const unsigned int Xmin, const unsigned int Ymin, const unsigned int Xmax, const unsigned int Ymax, const Pixel& couleur) {
 	assert(Xmin <= Xmax);
-	assert(Xmin <= dimx);
-	assert(Xmax <= dimx);
+	assert(Xmin < dimx);
+	assert(Xmax < dimx);
 	assert(Ymin <= Ymax);
-	assert(Ymin <= dimy);
-	assert(Ymax <= dimy);
-	for(unsigned int y = Ymin; y < Ymax; ++y) {
-		for(unsigned int x = Xmin; x < Xmax; ++x) {
-			setPix(x, y, couleur);
+	assert(Ymin < dimy);
+	assert(Ymax < dimy);
+	for(unsigned int i = Xmin; i <= Xmax; ++i) {
+		for(unsigned int j = Ymin; j <= Ymax; ++j) {
+			setPix(i, j, couleur);
 		}
 	}
 }
 
 void Image::effacer(const Pixel& couleur) {
-	dessinerRectangle(0, 0, dimx, dimy, couleur);
+	dessinerRectangle(0, 0, dimx - 1, dimy - 1, couleur);
 }
 
 void Image::testRegression() {
@@ -118,7 +118,7 @@ void Image::sauver(const string & filename) const {
 
     for (unsigned int y = 0; y < dimy; ++y) {
         for (unsigned int x = 0; x < dimx; ++x) {
-            Pixel &pix = getPix(x++, y);
+            Pixel &pix = getPix(x, y);
             fichier << +pix.getRouge() << " " << +pix.getVert() << " " << +pix.getBleu() << " ";
         }
     }
@@ -178,9 +178,9 @@ void Image::afficherInit() {
 	renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
 	texture = SDL_CreateTextureFromSurface(renderer,surface);
-
-	SDL_RenderClear(renderer);
+	SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
 	
+	SDL_RenderClear(renderer);
     SDL_Rect r;
     r.x = 0;
     r.y = 0;
@@ -188,10 +188,7 @@ void Image::afficherInit() {
     r.h = 200;
 
 	SDL_RenderCopy(renderer,texture,NULL,&r);
-
-	
-	SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
-    SDL_RenderClear(renderer);
+	SDL_RenderPresent(renderer);
 }
 
 void Image::afficherBoucle(){
@@ -199,7 +196,7 @@ void Image::afficherBoucle(){
 	bool fermer = false;
 	while (!fermer){
 		SDL_WaitEvent(&event);
-		if(event.type == SDL_QUIT || event.type == SDL_SCANCODE_SPACE) fermer = true;
+		if(event.type == SDL_QUIT) fermer = true;
 	}
 }
 
