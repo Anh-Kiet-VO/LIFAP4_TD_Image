@@ -2,7 +2,7 @@
 
 À faire :
 * SDL2 ==> afficher(), afficherBoucle()
-=> Le poisson ne s'affiche pas
+=> Le poisson est handicapé / zoomDezoom de notre afficherBoucle
 
 ## Étudiants
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
