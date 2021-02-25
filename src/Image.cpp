@@ -130,7 +130,7 @@ void Image::ouvrir(const string & filename) {
     ifstream fichier (filename.c_str());
     assert(fichier.is_open());
 
-	unsigned char r, g, b;
+	unsigned int r, g, b;
 	string mot;
 
 	fichier >> mot >> dimx >> dimy >> mot;
