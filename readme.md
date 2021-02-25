@@ -1,10 +1,5 @@
 # LIFAP4 - TD Image
 
-À faire :
-* afficherBoucle() (zoom / dezoom)
-* Dépendance erreur lors du script
-* Le poison n'est plus handicapé, Cécilia joue contre nous
-
 ### Étudiants :
 Kévin CUZIN (p1909458 - kevin.cuzin@etu.univ-lyon1.fr)  
 Anh-Kiet VO (p1907921 - anh-kiet.vo@etu.univ-lyon1.fr)  
