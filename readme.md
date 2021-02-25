@@ -30,7 +30,7 @@ cd P1909458_P1907921_P1908025
 
 Puis pour compiler le programme, utilisez la commande :  
 ```
-make all
+make
 ```  
 
 -----------------
