@@ -13,7 +13,7 @@ int main() {
     image1.setPix(41, 30, vert);
     image1.sauver("./data/image1.ppm");
  
-    Image image2 (64, 48);
+    Image image2;
     image2.ouvrir("./data/image1.ppm");
     image2.dessinerRectangle(2, 2, 7, 13, vert);
     image2.dessinerRectangle(38, 18, 43, 46, noir);

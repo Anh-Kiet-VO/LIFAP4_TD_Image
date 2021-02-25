@@ -138,14 +138,16 @@ void Image::ouvrir(const string & filename) {
 
 	if (tab != NULL) delete [] tab;
 	tab = new Pixel [dimx * dimy];
-
-    for(unsigned int y = 0; y < dimy; y++) {
+	
+    
+	for(unsigned int y = 0; y < dimy; y++) {
         for(unsigned int x = 0; x < dimx; x++) {
             fichier >> r >> g >> b;
-            getPix(x, y).setRouge((unsigned char) r);
-            getPix(x, y).setVert((unsigned char) g);
-            getPix(x, y).setBleu((unsigned char) b);
-        }
+            getPix(x, y).setRouge(r);
+            getPix(x, y).setVert(g);
+            getPix(x, y).setBleu(b);
+			
+		}
 	}
     fichier.close();
     cout << "Lecture de l'image " << filename << " ... OK\n";
@@ -180,7 +182,7 @@ void Image::afficherInit() {
 	//création de la texture
 	texture = SDL_CreateTextureFromSurface(renderer,surface);
 	
-	//couleur de fond
+	//couleur de fond grise
 	SDL_SetRenderDrawColor(renderer, 128, 128, 128, 128);
 	
 	SDL_RenderClear(renderer);
