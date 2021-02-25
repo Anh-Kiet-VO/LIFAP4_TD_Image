@@ -140,10 +140,14 @@ class Image {
  
     /**
       @brief
-      Afficher les valeurs des pixels sur la console
+       Afficher les valeurs des pixels sur la console
     */
     void afficherConsole(); 
 
+    /**
+      @brief
+       Afficher image avec SDL
+    */
     void afficher();
 };
  

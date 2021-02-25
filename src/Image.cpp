@@ -185,6 +185,7 @@ void Image::afficherInit() {
 	//couleur de fond grise
 	SDL_SetRenderDrawColor(renderer, 128, 128, 128, 128);
 	
+	//remplit l'image de la couleur choisie 
 	SDL_RenderClear(renderer);
 
 	//création des dimensions de notre fenêtre
@@ -208,7 +209,8 @@ void Image::afficherBoucle(){
 			fermer = true;
 		}
 		switch(event.key.keysym.scancode){
-			case SDL_SCANCODE_ESCAPE: //si escape est pressée la fenêtre se ferme
+			//Si echap est pressée la fenêtre se ferme
+			case SDL_SCANCODE_ESCAPE: 
 				fermer = true;
 				break;
 			//Si G est pressée dézoom sur l'image
