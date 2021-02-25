@@ -28,19 +28,19 @@ all: ./bin/test ./bin/exemple ./bin/affichage
 ./bin/test: $(OBJS_TEST)
 	$(CC) $(FLAGS) $(INCLUDES_DIR_SDL)  $(OBJS_TEST) -o ./bin/test $(LIBS_SDL)
 
-./obj/mainTest.o: ./src/mainTest.cpp ./src/image.h ./src/Pixel.h
+./obj/mainTest.o: ./src/mainTest.cpp ./src/Pixel.h ./src/Image.h
 	$(CC) $(FLAGS) -c ./src/mainTest.cpp -o ./obj/mainTest.o 
 
 ./bin/exemple: $(OBJS_EXEMPLE)
 	$(CC) $(FLAGS) $(INCLUDES_DIR_SDL) $(OBJS_EXEMPLE) -o ./bin/exemple $(LIBS_SDL)
 
-./obj/mainExemple.o: ./src/mainExemple.cpp ./src/image.h ./src/Pixel.h
+./obj/mainExemple.o: ./src/mainExemple.cpp ./src/Pixel.h ./src/Image.h
 	$(CC) $(FLAGS) -c ./src/mainExemple.cpp -o ./obj/mainExemple.o 
 
 ./bin/affichage: $(OBJS_AFFICHAGE)
 	$(CC) $(FLAGS) $(INCLUDES_DIR_SDL) $(OBJS_AFFICHAGE) -o ./bin/affichage $(LIBS_SDL)
 
-./obj/mainAffichage.o: ./src/mainAffichage.cpp ./src/image.h ./src/Pixel.h
+./obj/mainAffichage.o: ./src/mainAffichage.cpp ./src/Pixel.h ./src/Image.h
 	$(CC) $(FLAGS) -c ./src/mainAffichage.cpp -o ./obj/mainAffichage.o 
 
 ./obj/Pixel.o: ./src/Pixel.cpp ./src/Pixel.h
